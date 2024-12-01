@@ -1,0 +1,14 @@
+Total_value:
+Total_Value = SUM(FinData[Value]) 
+
+Savings:
+Savings = CALCULATE([Total_Value], 'FinData'[Type]="Savings") 
+
+Income:
+Income = CALCULATE([Total_Value], 'FinData'[Type]="Income") 
+
+Expenses:
+Expenses = CALCULATE([Total_Value], 'FinData'[Type]="Expense") 
+
+Savings %
+Savings % = DIVIDE([Total Savings],[Total Income])
